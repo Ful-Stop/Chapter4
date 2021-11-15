@@ -51,6 +51,20 @@ public class Exercises {
         System.out.println(totalCheck);
     }
 
+    public static boolean isPerfectSquare(int n){
+        int squareCheck1 = 1;
+        int squareCheck2 = 1;
+
+        while (squareCheck2 < n){
+            squareCheck1 += 2;
+            squareCheck2 += squareCheck1;
+        }
+        if (squareCheck2 == n){
+            return true;}
+        else{
+            return false;}
+        }
+
     public static void main(String[] args) {
 
         //addOnes
@@ -72,5 +86,13 @@ public class Exercises {
         printSum(7);
         printSum(22);
         printSum(47);
+        printSum(6);
+        printSum(8);
+
+        //isPerfectSquare
+        System.out.println(isPerfectSquare(16));
+        System.out.println(isPerfectSquare(121));
+        System.out.println(isPerfectSquare(20));
+        System.out.println(isPerfectSquare(420));
     }
 }
